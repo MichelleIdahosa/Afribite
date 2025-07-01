@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero'; // or wherever Hero is stored
-import Footer from "../components/Footer"
+import Footer from "../components/footer";
 import About from "../pages/About"
 import Contact from "../pages/Contact"
 import Testimonials from "../components/Testimonials"
