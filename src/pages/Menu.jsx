@@ -42,19 +42,23 @@ const handleAddToCart = (item) => {
     <div className="min-h-screen bg-white dark:bg-[#1C1A27] text-black dark:text-white">
       
       {/* NAV */}
-<header className="flex justify-between items-center px-6 py-4 
-  bg-[#E27258] text-white 
-  shadow-md sticky top-0 z-50 
-  dark:bg-[#1C1A27] dark:text-[#E27258]">
-
+<header className="flex justify-between items-center px-6 py-4 bg-[#E27258] text-white shadow-md sticky top-0 z-50 dark:bg-[#1C1A27] dark:text-[#E27258]">
+  {/* Logo */}
   <img
     src={icon}
     alt="Logo"
-    className="h-10 w-auto 
-      filter brightness-0 invert 
-      dark:filter-none"
+    className="h-10 w-auto filter brightness-0 invert dark:filter-none"
   />
 
+  {/* Nav Links */}
+  <ul className="hidden md:flex space-x-6 items-center font-medium">
+    <li><Link to="/" className="hover:text-white dark:hover:text-[#E27258]">Home</Link></li>
+    <li><Link to="/about" className="hover:text-white dark:hover:text-[#E27258]">About</Link></li>
+    <li><Link to="/contact" className="hover:text-white dark:hover:text-[#E27258]">Contact</Link></li>
+    <li><Link to="/testimonials" className="hover:text-white dark:hover:text-[#E27258]">Reviews</Link></li>
+  </ul>
+
+  {/* Search + Icons */}
   <div className="flex items-center gap-4">
     <div className="relative">
       <FiSearch className="absolute top-2 left-3 text-gray-400" />
@@ -66,6 +70,7 @@ const handleAddToCart = (item) => {
         className="pl-10 pr-4 py-2 text-sm rounded-full bg-white text-black"
       />
     </div>
+
     <FiUser />
     <Link to="/cart">
       <FiShoppingCart />

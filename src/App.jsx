@@ -20,7 +20,7 @@ import { CartProvider } from "./context/CartContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CategoryPage from './pages/CategoryPage';
-import ProductPage from "./pages/ProductPage"; 
+import ProductPage from "./pages/ProductPage";
 
 const App = () => {
   return (
@@ -32,7 +32,7 @@ const App = () => {
         <div className="bg-white text-black min-h-screen p-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<PrivateRoute><Menu /></PrivateRoute>} />
+            <Route path="/menu" element={<Menu />} />
             <Route path="/main-dish" element={<MainDish />} />
             <Route path="/appetizer" element={<Appetizer />} />
             <Route path="/dessert" element={<Dessert />} />
